@@ -49,7 +49,7 @@ Depending on your background, you can approach this chapter in two different way
 
 
 
-The main mathematical concepts we use in this book are: 
+The main mathematical concepts we use in this book are:
 
 * __Proofs:__ First and foremost, this book involves a heavy dose of formal mathematical reasoning, which includes mathematical _definitions_, _statements_, and _proofs_.
 
@@ -102,7 +102,7 @@ The basic components of a mathematical text are __definitions__, __assertions__ 
 
 ### Definitions
 
-Mathematicians often define new concepts in terms of old concepts.  
+Mathematicians often define new concepts in terms of old concepts.
 Here is a mathematical definition which you may have encountered in the past (and will see again shortly):
 
 
@@ -278,7 +278,7 @@ Table: An example of a function.
 
 
 
-If $f:S \rightarrow T$ satisfies that $f(x)\neq F(y)$ for all $x \neq y$ then we say that $f$ is _one-to-one_ ([onetoonedef](){.ref}, also known as an _injective_ function or simply an _injection_).
+If $f:S \rightarrow T$ satisfies that $f(x)\neq f(y)$ for all $x \neq y$ then we say that $f$ is _one-to-one_ ([onetoonedef](){.ref}, also known as an _injective_ function or simply an _injection_).
 If $F$ satisfies that for every $y\in T$ there is some $x\in S$ such that $F(x)=y$ then we say that $F$ is _onto_ (also known as a _surjective_ function or simply a _surjection_).
 A function that is both one-to-one and onto is known as a _bijective_ function or simply a _bijection_.
 A bijection from a set $S$ to itself is also known as a _permutation_ of $S$.
@@ -290,7 +290,7 @@ Note that $F^{-1}$ is itself a bijection from $T$ to $S$ (can you see why?).
 Giving a bijection between two sets is often a good way to show they have the same size.
 In fact, the standard mathematical definition of the notion that "$S$ and $T$ have the same cardinality" is that there exists a bijection $f:S \rightarrow T$.
 Further, the cardinality of a set $S$ is defined to be $n$ if there is a bijection from $S$ to the set $\{0,\ldots,n-1\}$.
-As we will see later in this book, this is a definition that can generalizes to defining the cardinality of _infinite_ sets.
+As we will see later in this book, this is a definition that generalizes to defining the cardinality of _infinite_ sets.
 
 
 
@@ -360,7 +360,7 @@ A _cycle_ is a path $(u_0,\ldots,u_k)$ where $u_0=u_{k}$.
 We say that two vertices $u,v\in V$ are _connected_ if either $u=v$ or there is a path from $(u_0,\ldots,u_k)$ where $u_0=u$ and $u_k=v$.
 We say that the graph $G$ is _connected_ if every pair of vertices in it is connected.
 
-Here are some basic facts about undirected graphs. We give some informal arguments below, but leave the full proofs as exercises (the proofs can be found  in  many of the resources listed in [notesmathchap](){.ref}). 
+Here are some basic facts about undirected graphs. We give some informal arguments below, but leave the full proofs as exercises (the proofs can be found  in  many of the resources listed in [notesmathchap](){.ref}).
 
 
 > ### {.lemma #degreesegeslem}
@@ -404,7 +404,7 @@ The path $P'$ is a valid path between $u$ and $v$ since every consecutive pair o
 
 ::: {.remark title="Finding proofs" #comingupwithproofs}
 [simplepathlemex](){.ref} is a good example of the process of finding a proof.
-You start by ensuring you understand what the statement means, and then come up with 
+You start by ensuring you understand what the statement means, and then come up with
 an informal argument why it should be true.
 You then transform the informal argument into a rigorous proof.
 This proof need not be very long or overly formal, but should clearly establish why the conclusion of the statement follow from its assumptions.
@@ -882,7 +882,7 @@ We will use induction on the number $n$ of vertices, and so we will define the s
 
 >$Q(n)$ is _"For every DAG  $G=(V,E)$ with $n$ vertices, there is a layering of $G$."_
 
-The statement for $Q(0)$ (where the graph contains no vertices) is trivial. 
+The statement for $Q(0)$ (where the graph contains no vertices) is trivial.
 Thus it will suffice to prove the following: _for every $n>0$, if $Q(n-1)$ is true then $Q(n)$ is true._
 
 To do so, we need to somehow find a way, given a graph $G$ of $n$ vertices, to reduce the task of finding a layering for $G$ into the task of finding a layering for some other graph $G'$ of $n-1$ vertices.
@@ -922,7 +922,7 @@ We claim that $f$ is a valid layering, namely that for every edge $u \rightarrow
 
 * __Case 3:__ $u \neq v_0$, $v=v_0$. This case can't happen since $v_0$ does not have in-neighbors.
 
-* __Case 4:__ $u=v_0, v=v_0$. This case again can't happen since it means that $v_0$ is its own-neighbor --- it is involved in a _self loop_ which is a form cycle that is disallowed in an acyclic graph. 
+* __Case 4:__ $u=v_0, v=v_0$. This case again can't happen since it means that $v_0$ is its own-neighbor --- it is involved in a _self loop_ which is a form cycle that is disallowed in an acyclic graph.
 
 Thus, $f$ is a valid layering for $G$ which completes the proof.
 :::
@@ -1002,7 +1002,7 @@ Because the language notation is so prevalent in other textbooks, we will occasi
 
 ### Variable name conventions {#conventionsec }
 
-Like programming, mathematics is full of _variables_. 
+Like programming, mathematics is full of _variables_.
 Whenever you see a variable, it is always important to keep track of what is its _type_ (e.g., whether the variable is a number, a string, a function, a graph, etc.).
 To make this easier, we try to stick to certain conventions and consistently use certain identifiers for variables of the same type.
 Some of these conventions are listed in [notationtable](){.ref} below.
@@ -1047,7 +1047,7 @@ Some examples of such idioms that we use in this text include the following:
 * __Quantifiers:__ Mathematical texts involve many quantifiers such as "for all" and "exists". We sometimes spell these in words as in **"for all $i\in\N$"** or **"there is $x\in \{0,1\}^*$"**,  and sometimes use the formal symbols $\forall$ and $\exists$. It is important to keep track on which variable is quantified in what way the _dependencies_ between the variables. For example, a sentence fragment such as __"for every $k >0$ there exists $n$"__ means that $n$ can be chosen in a way that _depends_ on $k$. The order of quantifiers is important. For example, the following is a true statement: _"for every natural number $k>1$ there exists a prime number $n$ such that $n$ divides $k$."_ In contrast, the following statement is false: _"there exists a prime number $n$ such that for every natural number $k>1$, $n$ divides $k$."_
 
 
-* __Numbered equations, theorems, definitions:__ To keep track of all the terms we define and statements we prove, we often assign them a (typically numeric) label, and then refer back to them in other parts of the text. 
+* __Numbered equations, theorems, definitions:__ To keep track of all the terms we define and statements we prove, we often assign them a (typically numeric) label, and then refer back to them in other parts of the text.
 
 * __(i.e.,), (e.g.,):__ Mathematical texts tend to contain quite a few of these expressions. We use $X$  (i.e., $Y$) in cases where $Y$ is equivalent to $X$ and $X$ (e.g., $Y$) in cases where $Y$ is an example of $X$ (e.g., one can use phrases such as "a natural number (i.e., a non-negative integer)" or "a natural number (e.g., $7$)").
 
@@ -1055,7 +1055,7 @@ Some examples of such idioms that we use in this text include the following:
 * __"Thus"__, __"Therefore"__ , __"We get that"__: This means that the following sentence is implied by the preceding one, as in "The $n$-vertex graph $G$ is connected. Therefore it contains at least $n-1$ edges." We sometimes use __"indeed"__ to indicate that the following text justifies the claim that was made in the preceding sentence as in _"The $n$-vertex graph $G$ has at least $n-1$ edges. Indeed, this follows since $G$ is connected."_
 
 
-* __Constants:__ In Computer Science, we typically care about how our algorithms' resource consumption (such as running time) _scales_ with certain quantities (such as the length of the input). We refer to quantities that do not depend on the length of the input as _constants_ and so often use statements such as  _"there exists a constant $c>0$ such that for every $n\in \N$, Algorithm $A$ runs in at most $c \cdot n^2$ steps on inputs of length $n$."_ The qualifier "constant" for $c$ is not strictly needed but is added to emphasize that $c$ here is a fixed number independent of $n$. In fact sometimes, to reduce cognitive load, we will simply replace $c$ by a sufficiently  large round number such as $10$, $100$, or $1000$, or use $O$-notation and write  _"Algorithm $A$ runs in $O(n^2)$ time."_ 
+* __Constants:__ In Computer Science, we typically care about how our algorithms' resource consumption (such as running time) _scales_ with certain quantities (such as the length of the input). We refer to quantities that do not depend on the length of the input as _constants_ and so often use statements such as  _"there exists a constant $c>0$ such that for every $n\in \N$, Algorithm $A$ runs in at most $c \cdot n^2$ steps on inputs of length $n$."_ The qualifier "constant" for $c$ is not strictly needed but is added to emphasize that $c$ here is a fixed number independent of $n$. In fact sometimes, to reduce cognitive load, we will simply replace $c$ by a sufficiently  large round number such as $10$, $100$, or $1000$, or use $O$-notation and write  _"Algorithm $A$ runs in $O(n^2)$ time."_
 
 
 
@@ -1195,4 +1195,3 @@ If the function $f$ is _onto_ then every vertex in $B$ has in-degree at least on
 If $f$ is a bijection then every vertex in $B$ has in-degree exactly equal to one.
 
 Carl Pomerance's quote is taken from [the home page of Doron Zeilberger](http://sites.math.rutgers.edu/~zeilberg/quotes.html).
-
